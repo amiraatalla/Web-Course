@@ -1,0 +1,227 @@
+/* google font  */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap');
+
+*{
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-gold: #d39038;
+    --clr-btn: #d33838;
+    --clr-btn-bg: #fff;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo{
+    position: relative;
+    color: var(--clr-btn);
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .5s;
+    /* animation  */
+    opacity: 0;
+    animation: slide_left .5s linear forwards;
+    animation-delay: .2s;
+}
+header .logo:hover{
+    color: var(--clr-gold);
+}
+
+header ul{
+    position: relative;
+    display: flex;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    display: inline-block;
+    color: var(--clr-btn);
+    background: var(--clr-btn-bg);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 8px 18px;
+    text-decoration: none;
+    user-select: none;
+    border-radius: 2rem;
+    /* animation  */
+    opacity: 0;
+    animation: slide_top .5s linear forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+header ul li a.active,
+header ul li a:hover{
+    background: var(--clr-btn);
+    color: var(--clr-btn-bg);
+}
+
+.txtBx{
+    position: relative;
+    max-width: 550px;
+}
+
+.txtBx h2{
+    color: var(--clr-gold);
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    /* animation  */
+    opacity: 0;
+    animation: slide_right .5s linear forwards;
+    animation-delay: 1s;
+}
+
+.txtBx p{
+    font-size: 1.2rem;
+    color: #333;
+    /* animation  */
+    opacity: 0;
+    animation: slide_right .5s linear forwards;
+    animation-delay: 1.5s;
+}
+
+.txtBx a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: var(--clr-btn);
+    color: var(--clr-btn-bg);
+    font-style: 1.2rem;
+    border-radius: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: .5s;
+    /* animation  */
+    opacity: 0;
+    animation: slide_top .5s linear forwards;
+    animation-delay: 2s;
+}
+.txtBx a:hover{
+    color: var(--clr-btn-bg);
+    background: var(--clr-gold);
+}
+
+.sci{
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sci li{
+    list-style: none;
+}
+
+.sci li a{
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+    width: 50px;
+    height: 50px;
+    background: var(--clr-btn);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: .5s ease-in-out;
+    /* animation  */
+    opacity: 0;
+    animation: slide_right .5s linear forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.sci li a:hover{
+    background: var(--clr-gold);
+    transform: translateY(-10px) !important;
+}
+
+.sci li a ion-icon{
+    color: var(--clr-btn-bg);
+    font-size: 1.5rem;
+}
+
+.main-img{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: auto;
+    /* animation  */
+    opacity: 0;
+    animation: fade_in .5s linear forwards;
+    animation-delay: 3.5s;
+}
+
+/* Ok Let's Animate This  */
+/* ============== Animation ============== */
+@keyframes slide_left{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_right{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide_top{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fade_in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
