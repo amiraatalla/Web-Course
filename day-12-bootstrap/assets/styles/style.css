@@ -1,0 +1,13 @@
+#card{
+    color: antiquewhite;
+}
+.card-text{
+    color: aqua;
+}
+.text{
+    color: blue;
+}
+.logo{
+    width: 35%;
+    border-radius: 70%;
+}

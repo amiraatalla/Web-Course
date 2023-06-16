@@ -1,0 +1,30 @@
+.clr-black{
+    color: black;
+}
+.vcompany,.vimgs,.about{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+div>p{
+    font-size: 20px;
+}
+.vcompany,.about{
+    background-color: #D7EAE9;
+}
+.vimgs{
+    background-color: #e8eded;
+}
+.bgclr{
+    background: rgb(2, 29, 62);
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+ul{
+    list-style: none;
+}
+ul li i{
+    display: inline;
+}
+
