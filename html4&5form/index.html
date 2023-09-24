@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form method="GET">
+        <input type="number" value="1" name="id" hidden />
+        <label for="fnam">First name :</label>
+        <input type="text" id="fnam" name="fname" placeholder="please enter your first name" />
+        <br/>
+        <br/>
+        <label>Last name :</label>
+        <input type="text" name="lname"/>
+        <br/>
+        <br/>
+        <label>Email :</label>
+        <input type="email" name="mail" required/>
+        <br/>
+        <br/>
+        <label>Password :</label>
+        <input type="password" name="pass" />
+        <br/>
+        <br/>
+        <label>Color :</label>
+        <input type="color" name="color-code" />
+        <br/>
+        <br/>
+        <input type="submit" name="send" value="Submit" />
+        <input type="reset" name="reset" value="Reset" />
+    </form>
+</body>
+
+</html>
