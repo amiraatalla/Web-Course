@@ -9,28 +9,80 @@
 </head>
 
 <body>
-    <form method="GET">
+    <form method="GET" novalidate target="_blank">
         <input type="number" value="1" name="id" hidden />
+        <label>ID : </label>
+        <input type="number" value="1" name="id" readonly />
+        <br />
+        <br />
         <label for="fnam">First name :</label>
         <input type="text" id="fnam" name="fname" placeholder="please enter your first name" />
-        <br/>
-        <br/>
+        <br />
+        <br />
         <label>Last name :</label>
-        <input type="text" name="lname"/>
-        <br/>
-        <br/>
+        <input type="text" name="lname" value="reda" disabled />
+        <br />
+        <br />
         <label>Email :</label>
-        <input type="email" name="mail" required/>
-        <br/>
-        <br/>
+        <input type="email" name="mail" required autofocus />
+        <br />
+        <br />
         <label>Password :</label>
-        <input type="password" name="pass" />
-        <br/>
-        <br/>
+        <input type="password" name="pass" minlength="2" maxlength="5" />
+        <br />
+        <br />
         <label>Color :</label>
         <input type="color" name="color-code" />
-        <br/>
-        <br/>
+        <br />
+        <br />
+        <label>Range :</label>
+        <input type="range" name="range" min="10" max="50" step="10" />
+        <br />
+        <br />
+        <label>Number :</label>
+        <input type="number" name="number" min="10" max="50" step="10" />
+        <br />
+        <br />
+        <label>Gender :</label>
+        <label for="mal">male:</label>
+        <input type="radio" id="mal" name="gender" value="male" />
+        <label for="fmal">female:</label>
+        <input type="radio" id="fmal" name="gender" value="female" />
+        <br />
+        <br />
+        <label>Sports :</label>
+        <label for="foot">Football:</label>
+        <input type="checkbox" id="foot" name="sport" value="Football" />
+        <label for="basket">Basketball:</label>
+        <input type="checkbox" id="basket" name="sport" value="Basketball" />
+        <br />
+        <br />
+        <label for="cnt">Country</label>
+        <select id="cnt" name="country">
+            <optgroup label="arab-countries">
+                <option value="egypt">Egypt</option>
+                <option value="africa">African</option>
+                <option value="oman">Oman</option>
+            </optgroup>
+            <optgroup label="forigen-countries">
+                <option value="italy">Italy</option>
+                <option value="american">American</option>
+                <option value="paris">Paris</option>
+            </optgroup>
+        </select>
+        <br />
+        <br />
+        <input type="file" />
+        <label>url</label>
+        <input type="url" />
+        <input type="search"/>
+        <input type="time"/>
+        <input type="date"/>
+        <input type="month"/>
+        <input type="week"/>
+        <br />
+        <textarea cols="100" rows="10"></textarea>
+        <br />
         <input type="submit" name="send" value="Submit" />
         <input type="reset" name="reset" value="Reset" />
     </form>
